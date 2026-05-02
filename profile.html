@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Saya — SMART BSU</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-recycle"></i></div>
+                <span>SMART <b>BSU</b></span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="sampah.html">Edukasi</a></li>
+                <li><a href="partnership.html">Kerja Sama</a></li>
+                <li><a href="point.html">Point System</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="nav-points">
+                    <i class="fas fa-star"></i>
+                    <span id="nav-point-val">0</span> Pts
+                </div>
+                <a href="profile.html" class="nav-avatar active" id="nav-avatar">
+                    <img src="https://ui-avatars.com/api/?name=User&background=22c55e&color=fff" alt="Profile" id="avatar-img">
+                </a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container page-spacing">
+        
+        <!-- HEADER PROFILE -->
+        <section class="profile-hero">
+            <div class="profile-hero-bg"></div>
+            <div class="profile-hero-content">
+                <div class="profile-avatar-large">
+                    <img src="https://ui-avatars.com/api/?name=User&background=ffffff&color=22c55e&size=120" alt="Avatar" id="main-avatar">
+                </div>
+                <div class="profile-user-info">
+                    <h1 id="disp-nama">Nama Pengguna</h1>
+                    <p id="disp-email"><i class="fas fa-envelope"></i> email@contoh.com</p>
+                    <div class="user-badges">
+                        <span class="badge" id="disp-kecamatan"><i class="fas fa-map-marker-alt"></i> Kecamatan</span>
+                        <span class="badge badge-blue" id="disp-sektor"><i class="fas fa-briefcase"></i> Sektor</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="profile-grid">
+            <!-- KOLOM KIRI: STATISTIK & QR CODE -->
+            <div class="profile-sidebar">
+                
+                <!-- Statistik Mini -->
+                <div class="stat-cards-mini">
+                    <div class="stat-card-m">
+                        <div class="sc-icon"><i class="fas fa-star"></i></div>
+                        <div class="sc-data">
+                            <h3 id="disp-point">0</h3>
+                            <span>Total Point</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-m">
+                        <div class="sc-icon blue"><i class="fas fa-weight"></i></div>
+                        <div class="sc-data">
+                            <h3><span id="disp-kg">0</span> Kg</h3>
+                            <span>Sampah Disetor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Identitas QR -->
+                <div class="card qr-id-card">
+                    <div class="card-header text-center">
+                        <h3><i class="fas fa-qrcode"></i> ID SMART BSU</h3>
+                        <p>Tunjukkan QR ini ke petugas saat setor sampah</p>
+                    </div>
+                    <div class="qr-wrapper">
+                        <div id="user-qr-code"></div>
+                    </div>
+                    <div class="qr-footer">
+                        <span id="disp-userid">ID: #000000</span>
+                    </div>
+                </div>
+
+                <!-- Tombol Logout -->
+                <button id="btn-logout" class="btn btn-danger btn-block">
+                    <i class="fas fa-sign-out-alt"></i> Keluar / Logout
+                </button>
+            </div>
+
+            <!-- KOLOM KANAN: FORM BIODATA -->
+            <div class="profile-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user-edit"></i> Pengaturan Biodata</h2>
+                        <p>Perbarui informasi profil Anda agar data tetap akurat.</p>
+                    </div>
+                    
+                    <form id="form-update-profile" class="profile-form">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="upd-nama" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email (Tidak dapat diubah)</label>
+                            <input type="email" id="upd-email" disabled class="disabled-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tanggal Lahir</label>
+                            <input type="date" id="upd-tgl" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Kecamatan</label>
+                                <select id="upd-kecamatan" required>
+                                    <option value="Bogor Barat">Bogor Barat</option>
+                                    <option value="Bogor Timur">Bogor Timur</option>
+                                    <option value="Bogor Selatan">Bogor Selatan</option>
+                                    <option value="Bogor Utara">Bogor Utara</option>
+                                    <option value="Bogor Tengah">Bogor Tengah</option>
+                                    <option value="Tanah Sareal">Tanah Sareal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Sektor</label>
+                                <select id="upd-sektor" required>
+                                    <option value="Rumah Tangga">Rumah Tangga</option>
+                                    <option value="Kuliner">Kuliner</option>
+                                    <option value="Pasar">Pasar</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="update-msg" class="form-message"></div>
+
+                        <div class="form-actions text-right">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Simpan Perubahan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-bottom text-center">
+                &copy; 2024 SMART BSU Kota Bogor. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

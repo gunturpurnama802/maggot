@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Sampah — SMART BSU Bogor</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray page-edukasi">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-recycle"></i></div>
+                <span>SMART <b>BSU</b></span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="sampah.html" class="active">Edukasi</a></li>
+                <li><a href="partnership.html">Kerja Sama</a></li>
+                <li><a href="point.html">Point System</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="nav-points">
+                    <i class="fas fa-star"></i>
+                    <span id="nav-point-val">0</span> Pts
+                </div>
+                <a href="profile.html" class="nav-avatar" id="nav-avatar">
+                    <img src="https://ui-avatars.com/api/?name=User&background=22c55e&color=fff" alt="Profile" id="avatar-img">
+                </a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+        <a href="sampah.html" class="active"><i class="fas fa-book-open"></i> Edukasi Sampah</a>
+        <a href="partnership.html"><i class="fas fa-handshake"></i> Kerja Sama</a>
+        <a href="point.html"><i class="fas fa-star"></i> Point System</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    </div>
+
+    <main class="page-content">
+
+        <!-- HERO EDUKASI -->
+        <section class="edu-hero text-center position-relative overflow-hidden">
+            <div class="container relative z-10">
+                <div class="badge badge-glass mb-3 mx-auto"><i class="fas fa-book-reader"></i> Pusat Edukasi Lingkungan</div>
+                <h1 class="hero-title text-white">Edukasi Pengelolaan <span>Sampah ♻️</span></h1>
+                <p class="hero-desc mx-auto text-gray-100 mt-3" style="max-width: 700px; line-height: 1.8;">
+                    Pahami jenis sampah, cara pengolahan yang benar, dan bagaimana teknologi maggot BSF mengubah masalah menjadi sumber daya bernilai ekonomi tinggi di Kota Bogor.
+                </p>
+            </div>
+            <!-- Latar belakang abstrak hero -->
+            <div class="hero-bg-pattern"></div>
+        </section>
+
+        <div class="container page-spacing" style="margin-top: -40px; position: relative; z-index: 20;">
+            
+            <!-- TAB NAVIGATION -->
+            <div class="waste-tabs-container card p-2 mb-5 shadow-sm">
+                <div class="waste-tabs" role="tablist" id="edu-tabs">
+                    <button class="waste-tab active" data-target="panel-organik" role="tab">🌿 Sampah Organik</button>
+                    <button class="waste-tab" data-target="panel-inorganik" role="tab">🔵 Sampah Non-Organik</button>
+                    <button class="waste-tab" data-target="panel-maggot" role="tab">🐛 Teknologi Maggot</button>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PANEL 1: SAMPAH ORGANIK
+                 ========================================== -->
+            <div class="waste-panel active" id="panel-organik">
+                
+                <!-- Definisi -->
+                <div class="card mb-4 p-5 border-left-green">
+                    <h2 class="section-subtitle mb-3 d-flex align-center gap-2 text-green-800">
+                        <i class="fas fa-leaf text-green-500"></i> Apa itu Sampah Organik?
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Sampah organik adalah limbah yang berasal dari makhluk hidup (hewan atau tumbuhan) dan dapat terurai secara alami oleh mikroorganisme. 
+                        Sampah jenis ini mendominasi total sampah yang dihasilkan rumah tangga Indonesia — sekitar <strong class="text-green-600">55–60%</strong> dari total volume sampah.
+                    </p>
+                    <div class="alert alert-warning mt-4 bg-yellow-50 border-yellow text-yellow-800 p-3 rounded-lg">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>Bahaya Penanganan Salah:</strong> Meski mudah terurai, jika dibuang ke TPA tanpa pengolahan akan menghasilkan gas metana berbahaya yang 25x lebih merusak ozon dibanding CO2.
+                    </div>
+                </div>
+
+                <!-- Contoh Sampah -->
+                <div class="card mb-4 p-5">
+                    <h2 class="section-subtitle mb-4">📋 Contoh Sampah Organik</h2>
+                    <div class="waste-tags-grid">
+                        <span class="tag-item org-tag"><i class="fas fa-bowl-rice"></i> Sisa nasi</span>
+                        <span class="tag-item org-tag"><i class="fas fa-carrot"></i> Sayuran busuk</span>
+                        <span class="tag-item org-tag"><i class="fas fa-apple-alt"></i> Kulit buah</span>
+                        <span class="tag-item org-tag"><i class="fas fa-coffee"></i> Ampas kopi/teh</span>
+                        <span class="tag-item org-tag"><i class="fas fa-leaf"></i> Daun kering</span>
+                        <span class="tag-item org-tag"><i class="fas fa-tree"></i> Ranting pohon</span>
+                        <span class="tag-item org-tag"><i class="fas fa-drumstick-bite"></i> Sisa daging/tulang</span>
+                        <span class="tag-item org-tag"><i class="fas fa-fish"></i> Sisa ikan</span>
+                        <span class="tag-item org-tag"><i class="fas fa-egg"></i> Cangkang telur</span>
+                        <span class="tag-item org-tag"><i class="fas fa-seedling"></i> Jerami padi</span>
+                        <span class="tag-item org-tag"><i class="fas fa-horse-head"></i> Kotoran ternak</span>
+                        <span class="tag-item org-tag"><i class="fas fa-trash"></i> Kompos dapur</span>
+                    </div>
+                </div>
+
+                <!-- Cara Pengolahan -->
+                <div class="card mb-4 p-5 bg-gray-50">
+                    <h2 class="section-subtitle mb-4">⚙️ Cara Pengolahan Sampah Organik</h2>
+                    <div class="process-steps-grid">
+                        <div class="p-step-card bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="p-step-num bg-green-500 text-white">1</div>
+                            <h4 class="font-bold mt-3 mb-2">Pemilahan</h4>
+                            <p class="text-sm text-gray-600">Pisahkan sampah organik dari sampah non-organik sejak dari sumbernya (dapur rumah atau resto).</p>
+                        </div>
+                        <div class="p-step-card bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="p-step-num bg-green-500 text-white">2</div>
+                            <h4 class="font-bold mt-3 mb-2">Pengomposan</h4>
+                            <p class="text-sm text-gray-600">Buat kompos sendiri di rumah menggunakan komposter sederhana atau lubang biopori di tanah.</p>
+                        </div>
+                        <div class="p-step-card bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="p-step-num bg-green-500 text-white">3</div>
+                            <h4 class="font-bold mt-3 mb-2">Biogas</h4>
+                            <p class="text-sm text-gray-600">Skala komunitas: limbah organik difermentasi di biodigester untuk menjadi gas energi memasak.</p>
+                        </div>
+                        <div class="p-step-card bg-white p-4 rounded-xl shadow-sm border-green-300 border-2 relative">
+                            <div class="absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded-bl-lg rounded-tr-lg font-bold">Terbaik</div>
+                            <div class="p-step-num bg-green-600 text-white">4</div>
+                            <h4 class="font-bold mt-3 mb-2 text-green-700">Budidaya Maggot</h4>
+                            <p class="text-sm text-gray-600">Cara paling efisien: maggot BSF mengurai sampah 2× lebih cepat & menghasilkan panen protein tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips Pemilahan -->
+                <div class="card mb-4 p-5">
+                    <h2 class="section-subtitle mb-4">💡 Tips Memilah Sampah Organik di Rumah</h2>
+                    <div class="tips-list d-flex flex-column gap-3">
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition">
+                            <div class="tip-icon text-2xl">🗑️</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Siapkan 2 tempat sampah terpisah</strong>
+                                <p class="text-sm text-gray-600 m-0">Wadah hijau khusus organik, wadah lain untuk non-organik. Tempel stiker/label agar seluruh anggota keluarga ingat.</p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition">
+                            <div class="tip-icon text-2xl">💧</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Tiriskan air sebelum membuang</strong>
+                                <p class="text-sm text-gray-600 m-0">Sisa makanan berkuah sebaiknya ditiriskan airnya terlebih dahulu untuk mengurangi bau menyengat dan pembusukan dini.</p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition">
+                            <div class="tip-icon text-2xl">📅</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Kumpulkan secara rutin</strong>
+                                <p class="text-sm text-gray-600 m-0">Jangan biarkan menumpuk lebih dari 2 hari di dapur. Segera setor ke SMART BSU Siliwangi untuk dikonversi menjadi point.</p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition">
+                            <div class="tip-icon text-2xl">🎓</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Edukasi seluruh keluarga</strong>
+                                <p class="text-sm text-gray-600 m-0">Libatkan anak-anak dan asisten rumah tangga sejak dini dalam kebiasaan memilah sampah agar jadi gaya hidup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /Panel Organik -->
+            <!-- ==========================================
+                 PANEL 2: SAMPAH NON-ORGANIK
+                 ========================================== -->
+            <div class="waste-panel" id="panel-inorganik">
+                
+                <!-- Definisi -->
+                <div class="card mb-4 p-5 border-left-blue" style="border-left: 5px solid var(--blue);">
+                    <h2 class="section-subtitle mb-3 d-flex align-center gap-2" style="color: var(--blue-dark);">
+                        <i class="fas fa-box-open text-blue"></i> Apa itu Sampah Non-Organik?
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Sampah non-organik adalah limbah yang tidak berasal dari makhluk hidup atau membutuhkan waktu sangat lama untuk terurai secara alami. 
+                        Plastik butuh hingga <strong class="text-blue-600">500 tahun</strong> untuk terurai, sementara styrofoam bisa bertahan lebih dari <strong class="text-blue-600">1000 tahun</strong>.
+                    </p>
+                    <div class="alert alert-info mt-4 bg-blue-50 border-blue text-blue-800 p-3 rounded-lg" style="border: 1px solid #bfdbfe;">
+                        <i class="fas fa-info-circle"></i> <strong>Nilai Ekonomi:</strong> Meski "tidak terurai", sampah non-organik memiliki nilai ekonomi tinggi jika dikumpulkan bersih dan diproses melalui sistem daur ulang (Recycle).
+                    </div>
+                </div>
+
+                <!-- Contoh Sampah -->
+                <div class="card mb-4 p-5">
+                    <h2 class="section-subtitle mb-4">📋 Contoh Sampah Non-Organik</h2>
+                    <div class="waste-tags-grid">
+                        <span class="tag-item anorg-tag"><i class="fas fa-wine-bottle"></i> Botol plastik (PET)</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-shopping-bag"></i> Tas kresek</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-box"></i> Kardus/kertas</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-wine-glass"></i> Botol kaca</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-cube"></i> Kaleng bekas</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-mobile-alt"></i> Elektronik rusak (E-Waste)</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-battery-full"></i> Baterai bekas</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-lightbulb"></i> Lampu mati</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-cubes"></i> Styrofoam</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-tools"></i> Logam/besi</span>
+                        <span class="tag-item anorg-tag"><i class="fas fa-pills"></i> Obat kadaluarsa</span>
+                    </div>
+                </div>
+
+                <!-- Perbandingan Metode -->
+                <div class="card mb-4 p-5">
+                    <h2 class="section-subtitle mb-4">♻️ Potensi Daur Ulang Non-Organik</h2>
+                    <div class="table-responsive bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <table class="w-full text-left border-collapse" style="width: 100%;">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: white;">
+                                    <th class="p-4 font-bold text-sm">Jenis Sampah</th>
+                                    <th class="p-4 font-bold text-sm">Cara Pengolahan Lanjutan</th>
+                                    <th class="p-4 font-bold text-sm text-center">Nilai Ekonomi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-gray-700">
+                                <tr class="border-b border-gray-100"><td class="p-4 font-bold"><i class="fas fa-wine-bottle text-blue-500 mr-2"></i> Botol PET</td><td class="p-4">Daur ulang menjadi serat tekstil (baju/tas) atau kemasan baru.</td><td class="p-4 text-center text-yellow-500">⭐⭐⭐⭐</td></tr>
+                                <tr class="border-b border-gray-100 bg-gray-50"><td class="p-4 font-bold"><i class="fas fa-newspaper text-gray-500 mr-2"></i> Kertas/Kardus</td><td class="p-4">Dihancurkan jadi bubur kertas untuk produk kertas baru/paperbag.</td><td class="p-4 text-center text-yellow-500">⭐⭐⭐</td></tr>
+                                <tr class="border-b border-gray-100"><td class="p-4 font-bold"><i class="fas fa-cube text-gray-400 mr-2"></i> Kaleng/Aluminium</td><td class="p-4">Dilebur untuk jadi aluminium baru (menghemat 95% energi tambang).</td><td class="p-4 text-center text-yellow-500">⭐⭐⭐⭐</td></tr>
+                                <tr class="border-b border-gray-100 bg-gray-50"><td class="p-4 font-bold"><i class="fas fa-microchip text-green-600 mr-2"></i> Elektronik (E-Waste)</td><td class="p-4">Fasilitas khusus mengekstrak logam berharga (emas, perak, tembaga).</td><td class="p-4 text-center text-yellow-500">⭐⭐⭐⭐⭐</td></tr>
+                                <tr><td class="p-4 font-bold"><i class="fas fa-battery-quarter text-red-500 mr-2"></i> Baterai (B3)</td><td class="p-4 text-red-600">Berbahaya! Harus diserahkan ke fasilitas khusus B3, tidak boleh dibuang sembarangan.</td><td class="p-4 text-center text-gray-400">—</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="card mb-4 p-5">
+                    <h2 class="section-subtitle mb-4">💡 Gaya Hidup Minim Sampah (Zero Waste)</h2>
+                    <div class="tips-list d-flex flex-column gap-3">
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition border-left-blue">
+                            <div class="tip-icon text-2xl text-blue">🛍️</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Bawa tas belanja sendiri (Tote bag)</strong>
+                                <p class="text-sm text-gray-600 m-0">Hindari penggunaan tas kresek sekali pakai. Satu tas kain yang bisa dipakai ulang (reusable) mampu mencegah ratusan sampah plastik per tahun.</p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition border-left-blue">
+                            <div class="tip-icon text-2xl text-blue">🍶</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Gunakan tumbler & sedotan stainless</strong>
+                                <p class="text-sm text-gray-600 m-0">Tolak sedotan plastik dan air minum kemasan sekali pakai. Membawa botol minum premium menghemat pengeluaran dan mencegah penumpukan sampah botol.</p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-flex gap-3 p-3 rounded-lg border border-gray-200 bg-white shadow-sm hover-shadow transition border-left-blue">
+                            <div class="tip-icon text-2xl text-blue">🛠️</div>
+                            <div>
+                                <strong class="text-gray-800 d-block mb-1">Prinsip 3R (Reduce, Reuse, Recycle)</strong>
+                                <p class="text-sm text-gray-600 m-0">Kurangi konsumsi berlebih, perbaiki barang yang rusak sebelum membuangnya (Repair), dan kreasikan barang bekas menjadi fungsi baru (Upcycling).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /Panel Non-Organik -->
+
+            <!-- ==========================================
+                 PANEL 3: TEKNOLOGI MAGGOT BSF
+                 ========================================== -->
+            <div class="waste-panel" id="panel-maggot">
+                
+                <!-- Intro Maggot -->
+                <div class="maggot-highlight bg-green-50 p-5 rounded-2xl border border-green-200 mb-5 shadow-sm">
+                    <div class="d-flex align-center gap-3 mb-3">
+                        <div class="text-4xl">🐛</div>
+                        <h2 class="font-bold text-xl text-green-800">Black Soldier Fly (BSF) — Hermetia illucens</h2>
+                    </div>
+                    <p class="text-green-700 leading-relaxed text-sm">
+                        Black Soldier Fly adalah jenis serangga lalat yang fase larvanya (maggot) memiliki kemampuan super dalam mengurai bahan organik. 
+                        <b>BSF BUKANLAH hama pembawa penyakit</b> seperti lalat hijau/lalat rumah. Lalat BSF dewasa bahkan tidak memiliki mulut untuk makan, mereka hanya minum embun, kawin, bertelur, lalu mati dalam waktu ±10 hari. 
+                        Larva BSF sangat rakus memakan sisa makanan, kotoran ternak, dan limbah pertanian.
+                    </p>
+                </div>
+
+                <!-- Edukasi Kenapa Hanya Organik -->
+                <div class="card mb-5 p-5 border border-red-100" style="background: linear-gradient(to right, #ffffff, #fff1f2);">
+                    <h3 class="font-bold text-red-600 mb-2"><i class="fas fa-ban"></i> Mengapa Maggot HANYA untuk Organik?</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Sistem pencernaan larva maggot didesain secara biologis hanya untuk menghasilkan enzim pengurai zat organik. Mereka <b>TIDAK BISA</b> mencerna plastik, karet, beling, logam, atau styrofoam. Jika sampah organik yang Anda setor tercampur dengan bahan non-organik (misal: sisa nasi beserta bungkus plastiknya), proses biokonversi di fasilitas BSU akan terhambat dan bisa menyebabkan kematian massal koloni maggot. <b>Pemilahan yang disiplin adalah kunci!</b>
+                    </p>
+                </div>
+
+                <!-- Manfaat Grid -->
+                <h2 class="section-subtitle mb-4">🌟 Keunggulan Budidaya Maggot BSF</h2>
+                <div class="benefit-grid mb-5" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div class="card p-4 text-center border border-green-100 hover-shadow transition">
+                        <div class="text-3xl text-yellow-500 mb-2"><i class="fas fa-bolt"></i></div>
+                        <h4 class="font-bold text-green-800 text-sm mb-2">2× Lebih Cepat</h4>
+                        <p class="text-xs text-gray-500">Mengurai sampah organik secara instan dibanding metode komposter konvensional.</p>
+                    </div>
+                    <div class="card p-4 text-center border border-green-100 hover-shadow transition">
+                        <div class="text-3xl text-orange-500 mb-2"><i class="fas fa-drumstick-bite"></i></div>
+                        <h4 class="font-bold text-green-800 text-sm mb-2">Protein Tinggi</h4>
+                        <p class="text-xs text-gray-500">Larva kaya protein (40-45%), menjadi substitusi pakan ternak & ikan berkualitas premium.</p>
+                    </div>
+                    <div class="card p-4 text-center border border-green-100 hover-shadow transition">
+                        <div class="text-3xl text-green-500 mb-2"><i class="fas fa-seedling"></i></div>
+                        <h4 class="font-bold text-green-800 text-sm mb-2">Pupuk Kascing</h4>
+                        <p class="text-xs text-gray-500">Kotoran sisa maggot (kascing) sangat subur, organik, dan aman untuk segala jenis tanaman.</p>
+                    </div>
+                    <div class="card p-4 text-center border border-green-100 hover-shadow transition">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-globe-asia"></i></div>
+                        <h4 class="font-bold text-green-800 text-sm mb-2">Ramah Iklim</h4>
+                        <p class="text-xs text-gray-500">Mencegah pembusukan sampah di TPA yang menghasilkan gas metana pemicu efek rumah kaca.</p>
+                    </div>
+                </div>
+
+                <!-- Siklus Hidup BSF -->
+                <div class="card mb-5 p-5 bg-gray-50">
+                    <h2 class="section-subtitle mb-2 text-center">🔄 Siklus Hidup BSF (40–45 Hari)</h2>
+                    <p class="text-center text-sm text-gray-500 mb-4">Siklus berputar secara alami untuk menciptakan sirkulasi ekonomi tanpa limbah.</p>
+                    
+                    <div class="cycle-diagram" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px;">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center text-2xl border-2 border-green-200 mx-auto mb-2">🥚</div>
+                            <span class="text-xs font-bold text-green-800">Telur<br>(3-4 Hari)</span>
+                        </div>
+                        <div class="text-green-500 text-xl"><i class="fas fa-chevron-right"></i></div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full shadow-sm flex items-center justify-center text-3xl border-2 border-green-400 mx-auto mb-2 relative">
+                                🐛
+                                <span class="absolute -top-2 -right-2 bg-yellow-400 text-xs px-2 py-1 rounded-full font-bold shadow-sm">Fase Makan</span>
+                            </div>
+                            <span class="text-xs font-bold text-green-800">Maggot<br>(14-18 Hari)</span>
+                        </div>
+                        <div class="text-green-500 text-xl"><i class="fas fa-chevron-right"></i></div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full shadow-sm flex items-center justify-center text-2xl border-2 border-gray-300 mx-auto mb-2">🫛</div>
+                            <span class="text-xs font-bold text-gray-700">Prepupa & Pupa<br>(14-20 Hari)</span>
+                        </div>
+                        <div class="text-green-500 text-xl"><i class="fas fa-chevron-right"></i></div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center text-3xl border-2 border-green-200 mx-auto mb-2">🪰</div>
+                            <span class="text-xs font-bold text-green-800">Lalat BSF Dewasa<br>(5-8 Hari)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Point System -->
+                <div class="cta-box text-center p-5 rounded-2xl text-white shadow-lg relative overflow-hidden" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
+                    <div class="absolute right-0 top-0 opacity-10 text-9xl transform translate-x-1/4 -translate-y-1/4"><i class="fas fa-star"></i></div>
+                    <h3 class="font-bold text-2xl mb-2 relative z-10">Siap Jadi Bagian Solusi?</h3>
+                    <p class="mb-4 text-green-50 relative z-10 text-sm max-w-md mx-auto">Mulai pilah sampah organikmu dari sekarang, setor ke SMART BSU, dan kumpulkan poin rewardnya!</p>
+                    <a href="point.html" class="btn btn-outline bg-white text-green-700 border-none font-bold relative z-10 px-6 py-3 rounded-full hover-shadow">
+                        ⭐ Buka Sistem Point
+                    </a>
+                </div>
+
+            </div> <!-- /Panel Maggot -->
+
+        </div> <!-- /Container Tab -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>SMART <b>BSU</b></span>
+                    <p>Mitigasi Banjir & Ekonomi Sirkular Bogor.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kontak</a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                &copy; 2024 SMART BSU Kota Bogor. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

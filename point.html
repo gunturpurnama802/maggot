@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point System — SMART BSU Bogor</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray point-page-body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-recycle"></i></div>
+                <span>SMART <b>BSU</b></span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="sampah.html">Edukasi</a></li>
+                <li><a href="partnership.html">Kerja Sama</a></li>
+                <li><a href="point.html" class="active">Point System</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="nav-points">
+                    <i class="fas fa-star"></i>
+                    <span id="nav-point-val">0</span> Pts
+                </div>
+                <a href="profile.html" class="nav-avatar" id="nav-avatar">
+                    <img src="https://ui-avatars.com/api/?name=User&background=22c55e&color=fff" alt="Profile" id="avatar-img">
+                </a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+        <a href="sampah.html"><i class="fas fa-book-open"></i> Edukasi Sampah</a>
+        <a href="partnership.html"><i class="fas fa-handshake"></i> Kerja Sama</a>
+        <a href="point.html" class="active"><i class="fas fa-star"></i> Point System</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    </div>
+
+    <main class="page-content">
+
+        <!-- HERO SECTION: TOTAL POINT & PROGRESS -->
+        <section class="point-hero">
+            <div class="container">
+                <div class="point-hero-wrapper text-center">
+                    <div class="badge badge-glass mb-3"><i class="fas fa-gift"></i> Gamifikasi SMART BSU</div>
+                    <h1 class="hero-title">Sistem Point <span>Reward</span></h1>
+                    <p class="hero-desc mx-auto">Setor sampah organikmu di BSU Siliwangi Bogor, kumpulkan pointnya, dan tukarkan dengan hadiah nyata untuk mendukung ekonomi sirkular!</p>
+
+                    <!-- Display Angka Point Besar -->
+                    <div class="point-display-box mx-auto mt-4">
+                        <div class="pd-left">
+                            <h2 class="point-big-num" id="disp-point-big">0</h2>
+                            <span class="point-big-lbl">Total Point Saya</span>
+                        </div>
+                        <div class="pd-divider"></div>
+                        <div class="pd-right text-left">
+                            <h2 class="kg-big-num"><span id="disp-kg-big">0</span> Kg</h2>
+                            <span class="kg-big-lbl">Total Sampah Disetor</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Menuju Target 500 Pts -->
+                    <div class="progress-container mx-auto mt-4">
+                        <div class="progress-header">
+                            <span>Target Reward Utama (Sembako)</span>
+                            <span id="progress-text">0 / 500 Pts</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progress-bar" style="width: 0%;"></div>
+                        </div>
+                        <p class="progress-hint mt-2 text-sm text-gray-300">Setor <b>50 Kg</b> sampah lagi untuk mencapai target ini!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dekorasi Latar Belakang Hero Point -->
+            <div class="point-hero-bg-icon"><i class="fas fa-star"></i></div>
+        </section>
+
+        <!-- ALUR SISTEM POINT -->
+        <section class="point-flow page-spacing">
+            <div class="container">
+                <div class="card p-4 p-md-5">
+                    <div class="section-title text-center mb-5">
+                        <span>Langkah Mudah</span>
+                        <h2>Alur Sistem Point</h2>
+                    </div>
+                    
+                    <div class="flow-steps-grid">
+                        <div class="f-step-item">
+                            <div class="f-step-icon"><i class="fas fa-trash-alt"></i></div>
+                            <h4>1. Kumpulkan</h4>
+                            <p>Pisahkan sampah organik (sisa makanan, sayur) di rumah.</p>
+                        </div>
+                        <div class="f-step-arrow"><i class="fas fa-chevron-right"></i></div>
+                        <div class="f-step-item">
+                            <div class="f-step-icon"><i class="fas fa-balance-scale"></i></div>
+                            <h4>2. Timbang</h4>
+                            <p>Bawa ke BSU Siliwangi Bogor untuk ditimbang oleh petugas.</p>
+                        </div>
+                        <div class="f-step-arrow"><i class="fas fa-chevron-right"></i></div>
+                        <div class="f-step-item">
+                            <div class="f-step-icon green"><i class="fas fa-coins"></i></div>
+                            <h4>3. Dapat Point</h4>
+                            <p>1 Kg sampah organik bersih otomatis dikonversi jadi 10 point.</p>
+                        </div>
+                        <div class="f-step-arrow"><i class="fas fa-chevron-right"></i></div>
+                        <div class="f-step-item">
+                            <div class="f-step-icon blue"><i class="fas fa-gift"></i></div>
+                            <h4>4. Tukar Reward</h4>
+                            <p>Tukar saldo point Anda dengan voucher, pulsa, atau sembako.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULASI: SETOR & TUKAR POINT -->
+        <section class="point-simulator pb-5">
+            <div class="container">
+                <div class="simulator-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                    
+                    <!-- KARTU TAMBAH POINT (SETOR) -->
+                    <div class="card sim-card">
+                        <div class="sim-header">
+                            <div class="sim-icon bg-green-light text-green"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <h3>Simulasi Setor Sampah</h3>
+                                <p>Input berat sampah untuk melihat estimasi point.</p>
+                            </div>
+                        </div>
+                        <div class="sim-body mt-4">
+                            <form id="form-setor">
+                                <div class="form-group">
+                                    <label class="d-flex justify-between">
+                                        <span>Berat Sampah (Kg)</span>
+                                        <span class="text-green font-bold">1 Kg = 10 Pts</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-weight"></i>
+                                        <input type="number" id="input-setor-kg" min="1" step="0.5" placeholder="Masukkan angka (contoh: 5)" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="conversion-box bg-green-50 mt-3 p-3 rounded-lg border-green text-center">
+                                    <span class="text-sm text-green-700 block mb-1">Point yang akan didapat:</span>
+                                    <h3 class="text-2xl font-black text-green-600" id="setor-preview">+ 0 Pts</h3>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block mt-4 btn-lg shadow-green">
+                                    <i class="fas fa-plus-circle"></i> Tambah Point Sekarang
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- KARTU TUKAR POINT -->
+                    <div class="card sim-card">
+                        <div class="sim-header">
+                            <div class="sim-icon bg-blue-light text-blue"><i class="fas fa-exchange-alt"></i></div>
+                            <div>
+                                <h3>Tukar Point Reward</h3>
+                                <p>Tukar point dengan saldo tunai atau voucher.</p>
+                            </div>
+                        </div>
+                        <div class="sim-body mt-4">
+                            <form id="form-tukar">
+                                <div class="form-group">
+                                    <label class="d-flex justify-between">
+                                        <span>Jumlah Point Ditukar</span>
+                                        <span class="text-blue font-bold">100 Pts = Rp 5.000</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-star"></i>
+                                        <input type="number" id="input-tukar-point" min="100" step="10" placeholder="Minimal 100 point" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="conversion-box bg-blue-50 mt-3 p-3 rounded-lg border-blue text-center">
+                                    <span class="text-sm text-blue-700 block mb-1">Estimasi Nilai Rupiah:</span>
+                                    <h3 class="text-2xl font-black text-blue-600" id="tukar-preview">Rp 0</h3>
+                                </div>
+
+                                <div id="tukar-msg" class="form-message mt-2"></div>
+                                
+                                <button type="submit" class="btn btn-block mt-4 btn-lg" style="background: linear-gradient(135deg, var(--blue), #1e3a8a); color: white; box-shadow: 0 8px 20px rgba(37,99,235,0.25);">
+                                    <i class="fas fa-gift"></i> Proses Penukaran
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- KATALOG REWARD & TABEL KONVERSI -->
+        <section class="reward-catalog page-spacing bg-white">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <span>Tukarkan Keringatmu</span>
+                    <h2>Katalog Reward Spesial</h2>
+                    <p class="text-gray-500 mt-2">Pilih hadiah yang sesuai dengan kebutuhanmu sehari-hari.</p>
+                </div>
+
+                <!-- Kartu Reward -->
+                <div class="reward-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-bottom: 40px;">
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">🛒</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Voucher Belanja</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">100 Pts = Rp 5.000</span>
+                    </div>
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">📱</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Pulsa / Data</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">200 Pts = Rp 10.000</span>
+                    </div>
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">🌱</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Bibit Tanaman</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">150 Pts / Paket</span>
+                    </div>
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">🧺</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Pupuk Kascing</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">120 Pts / Kg</span>
+                    </div>
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">🍚</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Paket Sembako</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">500 Pts / Paket</span>
+                    </div>
+                    <div class="reward-item card text-center p-4">
+                        <div class="ri-icon text-3xl mb-3">💸</div>
+                        <h4 class="font-bold text-gray-800 text-sm">Transfer Tunai</h4>
+                        <span class="ri-pts inline-block mt-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">1000 Pts = Rp 50k</span>
+                    </div>
+                </div>
+
+                <!-- Tabel Detail Konversi -->
+                <div class="table-responsive bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <table class="w-full text-left border-collapse" style="width: 100%;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white;">
+                                <th class="p-4 font-bold text-sm" style="padding: 16px;">Point Ditukar</th>
+                                <th class="p-4 font-bold text-sm" style="padding: 16px;">Nilai Rupiah</th>
+                                <th class="p-4 font-bold text-sm" style="padding: 16px;">Setara Sampah</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            <tr class="border-b border-gray-100 hover-bg-light" style="border-bottom: 1px solid var(--gray-200);"><td class="p-4 font-bold" style="padding: 16px;">100 Pts</td><td class="p-4" style="padding: 16px;">Rp 5.000</td><td class="p-4" style="padding: 16px;">10 Kg Organik</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50 hover-bg-light" style="border-bottom: 1px solid var(--gray-200); background: var(--gray-50);"><td class="p-4 font-bold" style="padding: 16px;">200 Pts</td><td class="p-4" style="padding: 16px;">Rp 10.000</td><td class="p-4" style="padding: 16px;">20 Kg Organik</td></tr>
+                            <tr class="border-b border-gray-100 hover-bg-light" style="border-bottom: 1px solid var(--gray-200);"><td class="p-4 font-bold text-green-600" style="padding: 16px; color: var(--primary);">500 Pts (Populer)</td><td class="p-4" style="padding: 16px;">Rp 25.000</td><td class="p-4" style="padding: 16px;">50 Kg Organik</td></tr>
+                            <tr class="border-b border-gray-100 bg-gray-50 hover-bg-light" style="border-bottom: 1px solid var(--gray-200); background: var(--gray-50);"><td class="p-4 font-bold" style="padding: 16px;">1.000 Pts</td><td class="p-4" style="padding: 16px;">Rp 50.000</td><td class="p-4" style="padding: 16px;">100 Kg Organik</td></tr>
+                            <tr class="hover-bg-light"><td class="p-4 font-bold text-blue-600" style="padding: 16px; color: var(--blue);">5.000 Pts (VIP)</td><td class="p-4" style="padding: 16px;">Rp 250.000</td><td class="p-4" style="padding: 16px;">500 Kg Organik</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR PENUKARAN & LOG TRANSAKSI -->
+        <section class="qr-log-section page-spacing">
+            <div class="container">
+                <div class="grid-2-col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    
+                    <!-- QR Box Khusus -->
+                    <div class="card p-0 overflow-hidden" style="display: flex; flex-direction: column;">
+                        <div class="qr-redeem-header p-4 text-white text-center" style="background: linear-gradient(135deg, var(--blue), var(--blue-dark)); padding: 20px;">
+                            <h3 class="font-bold text-lg"><i class="fas fa-qrcode"></i> QR Penukaran Kasir</h3>
+                            <p class="text-xs mt-1" style="opacity: 0.85;">Tunjukkan ke petugas BSU Siliwangi</p>
+                        </div>
+                        <div class="p-5 text-center flex-grow" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: white; padding: 30px;">
+                            <div class="qr-wrapper p-3 bg-gray-50 rounded-xl border border-gray-200 inline-block" style="padding: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px;">
+                                <div id="redeem-qr-code"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-4" style="margin-top: 16px; font-size: 0.85rem; color: var(--gray-500);"><i class="fas fa-info-circle"></i> QR ini berbeda dengan QR identitas profil Anda.</p>
+                        </div>
+                    </div>
+
+                    <!-- Log Transaksi -->
+                    <div class="card p-5 h-full flex flex-col bg-white" style="padding: 24px; display: flex; flex-direction: column;">
+                        <div class="flex justify-between items-center border-b border-gray-200 pb-3 mb-4" style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 16px;">
+                            <h3 class="font-bold text-gray-800"><i class="fas fa-history text-gray-400"></i> Riwayat Transaksi</h3>
+                            <button id="btn-reset-log" class="text-xs text-red-500 hover-text-red-700 underline" style="background: none; border: none; color: #ef4444; font-size: 0.8rem; cursor: pointer; text-decoration: underline;">Reset Data (Demo)</button>
+                        </div>
+                        <div class="log-list flex-grow overflow-y-auto" id="transaction-log" style="max-height: 300px; overflow-y: auto; padding-right: 5px;">
+                            <!-- Log Item Template (di-render via JS) -->
+                            <!-- Jika kosong, akan diisi oleh script -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PANDUAN LENGKAP -->
+        <section class="guide-section page-spacing bg-white" style="padding: 60px 0; background: white;">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h2>Panduan Lengkap SMART BSU</h2>
+                </div>
+                <div class="guide-list" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+                    <div class="guide-item card p-4 flex gap-4 items-start border border-gray-100 shadow-sm" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px;">
+                        <div class="guide-num w-10 h-10 rounded-full text-white font-bold flex items-center justify-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1" style="margin-bottom: 6px;">Daftar & Login Akun</h4>
+                            <p class="text-sm text-gray-600" style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.6;">Buat akun SMART BSU. Pastikan mengisi kecamatan di Bogor dan sektor yang sesuai agar data terekap dengan benar.</p>
+                        </div>
+                    </div>
+                    <div class="guide-item card p-4 flex gap-4 items-start border border-gray-100 shadow-sm" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px;">
+                        <div class="guide-num w-10 h-10 rounded-full text-white font-bold flex items-center justify-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1" style="margin-bottom: 6px;">Kumpulkan Sampah Organik</h4>
+                            <p class="text-sm text-gray-600" style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.6;">Pisahkan sisa makanan dari plastik dan kertas. Pastikan sampah organik tidak tercampur beling atau bahan berbahaya.</p>
+                        </div>
+                    </div>
+                    <div class="guide-item card p-4 flex gap-4 items-start border border-gray-100 shadow-sm" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px;">
+                        <div class="guide-num w-10 h-10 rounded-full text-white font-bold flex items-center justify-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1" style="margin-bottom: 6px;">Datang ke BSU & Scan QR</h4>
+                            <p class="text-sm text-gray-600" style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.6;">Bawa sampah ke BSU Siliwangi. Buka menu <b>Profile</b> dan tunjukkan <b>QR ID</b> Anda ke petugas untuk verifikasi penimbangan.</p>
+                        </div>
+                    </div>
+                    <div class="guide-item card p-4 flex gap-4 items-start border border-gray-100 shadow-sm" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px;">
+                        <div class="guide-num w-10 h-10 rounded-full text-white font-bold flex items-center justify-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1" style="margin-bottom: 6px;">Tukar Point Kapan Saja</h4>
+                            <p class="text-sm text-gray-600" style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.6;">Gunakan QR Penukaran di halaman ini (Point System) untuk mencairkan saldo point menjadi hadiah di kasir BSU.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>SMART <b>BSU</b></span>
+                    <p>Mitigasi Banjir & Ekonomi Sirkular Bogor.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kontak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 SMART BSU Kota Bogor. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
